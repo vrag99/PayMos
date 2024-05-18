@@ -1,4 +1,3 @@
-import styles from "./pages.module.css";
 import {
   SignedIn,
   SignInButton,
@@ -9,13 +8,14 @@ import {
 import { Button } from "@/components/ui/button";
 import Spinner from "@/components/ui/spinner";
 import { Link } from "react-router-dom";
+import styles from './pages.module.css';
 
 export default function Home() {
   const { user, isLoaded } = useUser();
   return (
     <>
       <div
-        className={`w-full h-screen flex flex-col gap-2 justify-center items-center ${styles.waves_bg}`}
+        className={`w-full h-screen flex flex-col gap-2 justify-center items-center ${styles.wave_bg}`}
       >
         <SignedOut>
           <p className="text-xl text-muted-foreground font-semibold">

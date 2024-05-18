@@ -1,4 +1,5 @@
 import { TransakConfig, Transak } from "@transak/transak-sdk";
+import { useNavigate } from "react-router-dom";
 
 export default function Transac() {
   const transakConfig: TransakConfig = {
@@ -8,6 +9,7 @@ export default function Transac() {
     // For the full list of customisation options check the link below
   };
 
+  const navigate = useNavigate();
   const transak = new Transak(transakConfig);
 
   transak.init();
@@ -36,8 +38,7 @@ export default function Transac() {
    * You can close/navigate away at this event
    */
   Transak.on(Transak.EVENTS.TRANSAK_ORDER_SUCCESSFUL, (orderData) => {
-    console.log(orderData);
-
+    navigate('/payment-success');
     transak.close();
   });
 
