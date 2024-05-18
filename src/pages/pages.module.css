@@ -1,0 +1,6 @@
+.waves_bg {
+    background: url('../assets/waves.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
